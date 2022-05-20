@@ -1,13 +1,18 @@
 #include <iostream>
 using namespace std;
 class Order{
-protected:
-  int OID[];
-  int OrderStatus[];
+private:
+  int OID;
+  int OrderStatus;
   bool confirmation;
 
 public:
-  void PlaceOrder();
+  Order(int pOID,int pOrderStatus,bool pconfirmation) ;
+  {
+     pOID=OID;
+     pOrderStatus=OrderStatus;
+     pconfirmation=confirmation;
+  }
   void setOrderStatus();
   void displayOrder();
   bool confirmOrder();

@@ -1,14 +1,20 @@
 #include <iostream>
-#include "Order.h"
 using namespace std;
 
 class Cart{
-  protected:
+  private:
     int cartID;
     int productID;
     int quantity;
     float Total;
   public:
+    Cart(int scartID, int sproductID,int squantity,float sTotal)
+    {
+      scartID=cartID;
+      sproductID=productID;
+      squantity=quantity;
+      sTotal=Total;
+    }
     void displayCart();
     void addItem();
     void changeQuantity();
